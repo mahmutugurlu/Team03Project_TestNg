@@ -1,19 +1,15 @@
 package allovercommerce.pages;
 
+import allovercommerce.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class VendorPages {
-
-
-
-
-
-
-
-
-
+    public VendorPages() {
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
 
 
 
@@ -283,6 +279,10 @@ public class VendorPages {
 
 
 
+
+
+
+
     //Sule Yüksel 286-450
     @FindBy(xpath = "//a[@class='login inline-type']")
     public WebElement signinButton;
@@ -309,10 +309,10 @@ public class VendorPages {
     @FindBy(css = "#product_type")
     public WebElement productTypeDDM;
 
-    @FindBy(css = "#featured_img_remove_button")
+    @FindBy(id = "featured_img_display")
     public WebElement imageButton;
 
-    @FindBy(id = "__wp-uploader-id-4")
+    @FindBy(id = "__wp-uploader-id-1")
     public WebElement selectFilesButton;
     @FindBy(css = ".button.media-button.button-primary.button-large.media-button-select")
     public WebElement selectButton;
@@ -326,7 +326,7 @@ public class VendorPages {
     public WebElement descriptionMetinAlani;
     @FindBy(xpath = "(//p[@class='wcfm_title wcfm_full_ele'])[1]") //TC04 locate'leri
     public WebElement categoriesButton;
-    @FindBy(xpath = "//*[@id='product_cats_checklist']")
+    @FindBy(xpath = "//input[@name='product_cats[]']")
     public WebElement  catagoriesToplamClikButton;
     @FindBy(xpath = "//p[.='+Add new category']") //TC05 locate'leri
     public WebElement addNewCategoryButton;
@@ -334,8 +334,13 @@ public class VendorPages {
     public WebElement categoryNameBox;
     @FindBy(id = "wcfm_new_parent_cat")
     public WebElement parentCategoryDDM;
-    @FindBy(xpath = "//button[@data-taxonomy='product_brand']")
+    @FindBy(xpath = "//button[@data-taxonomy='product_cat']")
     public WebElement ADDButton;
+
+    @FindBy(xpath = "//input[@name='product_cats[]']")
+    public WebElement yeniEklenen;
+
+
     @FindBy(xpath = "//input[@class='wcfm-checkbox checklist_type_product_brand ']") //TC06 locate'leri
     public WebElement productBrandsClickButton ;
 
@@ -354,11 +359,6 @@ public class VendorPages {
 
     @FindBy(xpath = "//button[@data-taxonomy='product_brand']")
     public WebElement productBrandAddButton;
-
-
-
-
-
 
 
 
