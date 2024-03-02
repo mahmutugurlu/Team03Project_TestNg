@@ -18,3 +18,5 @@ d
 4src/test/java/allovercommerce/pages/VendorPages.java,2\d\2d7ba7041d964052d4b951205be51f5f51b6112e
 g
 7src/test/java/allovercommerce/pages/MyAccountPages.java,6\e\6ea80c34ffe71d62cf40acbd2f64163948056144
+H
+configuration.properties,b\6\b6c5dfcde54b418dd721679edbc49a89558b78a0
